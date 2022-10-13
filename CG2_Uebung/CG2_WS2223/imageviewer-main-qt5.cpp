@@ -49,6 +49,6 @@ int main(int argc, char *argv[])
     QGuiApplication::setApplicationDisplayName(ImageViewer::tr("Image Viewer"));
     ImageViewer imageViewer;
     imageViewer.show();
-    imageViewer.loadFile("../Pictures/Lenna.png");
+    imageViewer.loadFile("/home/schehat/image_manipulation/CG2_Uebung/Pictures/Lenna.png");
     return app.exec();
 }

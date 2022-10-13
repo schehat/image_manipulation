@@ -1,272 +1,50 @@
 Logging: 
 
-Contrast calculation done with contrast factor: 1
+geladen: /home/schehat/image_manipulation/CG2_Uebung/Pictures/Lenna.png
+2745
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 124 ; Variance: 2290
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.98
+Dynamik des Bildes geändert auf: 4 Bit
+10380
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 105 ; Variance: 1999
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.96
+Dynamik des Bildes geändert auf: 8 Bit
+24496
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 142 ; Variance: 1707
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.94
+Dynamik des Bildes geändert auf: 2 Bit
+29799
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 117 ; Variance: 1915
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.92
+Dynamik des Bildes geändert auf: 1 Bit
+29799
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 114 ; Variance: 2070
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.9
+Dynamik des Bildes geändert auf: 4 Bit
+34767
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 102 ; Variance: 1374
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.88
+Dynamik des Bildes geändert auf: 6 Bit
+58184
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 128 ; Variance: 2175
 --- Histogram calculated: linear scaling = 1
 
-Contrast calculation done with contrast factor: 0.86
+Dynamik des Bildes geändert auf: 8 Bit
+58184
 Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.84
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.82
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.8
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.78
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.76
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.74
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.72
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.7
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.68
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.64
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.62
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.6
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.52
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.46
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.4
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.3
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.2
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.16
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.1
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.08
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.06
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.04
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.02
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.04
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.14
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.24
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.36
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.5
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.64
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.78
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.86
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.32
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.6
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.8
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.96
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 2.24
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 2.4
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 2.32
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.8
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 1.16
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.96
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.92
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.9
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.92
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
---- Histogram calculated: linear scaling = 1
-
-Contrast calculation done with contrast factor: 0.94
-Image characteristics calculated:
---- Average: 0 ; Variance: 0
+--- Average: 152 ; Variance: 1529
 --- Histogram calculated: linear scaling = 1
 

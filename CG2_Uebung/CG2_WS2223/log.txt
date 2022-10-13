@@ -1,0 +1,7 @@
+Logging: 
+
+geladen: ../Pictures/Lenna.png
+Image characteristics calculated:
+--- Average: 0 ; Variance: 0
+--- Histogram calculated: linear scaling = 1
+
