@@ -11,7 +11,9 @@ HEADERS       = imageviewer-qt5.h \
     Examples/examples2.h \
     FreeMemory/freememory.h \
     GUI/fourierlabel.h \
-    GUI/tabs.h
+    GUI/tabs.h \
+    Utils/RGB.h \
+    Utils/YCbCr.h
 SOURCES       = imageviewer-qt5.cpp \
                 Sheet1/pixeloperations.cpp \
                 Sheet2/filteroperations.cpp \
@@ -23,6 +25,8 @@ SOURCES       = imageviewer-qt5.cpp \
                 FreeMemory/freememory.cpp \
                 GUI/fourierlabel.cpp \
                 GUI/tabs.cpp \
+                Utils/RGB.cpp \
+                Utils/YCbCr.cpp \
                 imageviewer-main-qt5.cpp
 
 # install

@@ -4,6 +4,8 @@
 
 #include <qimage.h>
 #include <cmath>
+#include "Utils/RGB.h"
+#include "Utils/YCbCr.h"
 
 namespace cg2{
     void calcImageCharacteristics(QImage * image, double*& histogram_ref, int& variance_ref, int& average_ref, const bool linear_scaling);

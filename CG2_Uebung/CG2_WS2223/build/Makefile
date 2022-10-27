@@ -63,6 +63,8 @@ SOURCES       = ../imageviewer-qt5.cpp \
 		../FreeMemory/freememory.cpp \
 		../GUI/fourierlabel.cpp \
 		../GUI/tabs.cpp \
+		../Utils/RGB.cpp \
+		../Utils/YCbCr.cpp \
 		../imageviewer-main-qt5.cpp moc_imageviewer-qt5.cpp \
 		moc_fourierlabel.cpp
 OBJECTS       = imageviewer-qt5.o \
@@ -76,6 +78,8 @@ OBJECTS       = imageviewer-qt5.o \
 		freememory.o \
 		fourierlabel.o \
 		tabs.o \
+		RGB.o \
+		YCbCr.o \
 		imageviewer-main-qt5.o \
 		moc_imageviewer-qt5.o \
 		moc_fourierlabel.o
@@ -135,6 +139,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		../.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -164,7 +169,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../GUI/fourierlabel.h \
-		../GUI/tabs.h ../imageviewer-qt5.cpp \
+		../GUI/tabs.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h ../imageviewer-qt5.cpp \
 		../Sheet1/pixeloperations.cpp \
 		../Sheet2/filteroperations.cpp \
 		../Sheet3/edgefilter.cpp \
@@ -175,6 +182,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../FreeMemory/freememory.cpp \
 		../GUI/fourierlabel.cpp \
 		../GUI/tabs.cpp \
+		../Utils/RGB.cpp \
+		../Utils/YCbCr.cpp \
 		../imageviewer-main-qt5.cpp
 QMAKE_TARGET  = imageviewer-qt5
 DESTDIR       = 
@@ -243,6 +252,7 @@ Makefile: ../imageviewer-qt5.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -320,6 +330,7 @@ Makefile: ../imageviewer-qt5.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
@@ -355,8 +366,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../imageviewer-qt5.h ../Sheet1/pixeloperations.h ../Sheet2/filteroperations.h ../Sheet3/edgefilter.h ../Sheet4/hough.h ../Sheet5/fourier.h ../Examples/examples1.h ../Examples/examples2.h ../FreeMemory/freememory.h ../GUI/fourierlabel.h ../GUI/tabs.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../imageviewer-qt5.cpp ../Sheet1/pixeloperations.cpp ../Sheet2/filteroperations.cpp ../Sheet3/edgefilter.cpp ../Sheet4/hough.cpp ../Sheet5/fourier.cpp ../Examples/examples1.cpp ../Examples/examples2.cpp ../FreeMemory/freememory.cpp ../GUI/fourierlabel.cpp ../GUI/tabs.cpp ../imageviewer-main-qt5.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../imageviewer-qt5.h ../Sheet1/pixeloperations.h ../Sheet2/filteroperations.h ../Sheet3/edgefilter.h ../Sheet4/hough.h ../Sheet5/fourier.h ../Examples/examples1.h ../Examples/examples2.h ../FreeMemory/freememory.h ../GUI/fourierlabel.h ../GUI/tabs.h ../Utils/RGB.h ../Utils/YCbCr.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../imageviewer-qt5.cpp ../Sheet1/pixeloperations.cpp ../Sheet2/filteroperations.cpp ../Sheet3/edgefilter.cpp ../Sheet4/hough.cpp ../Sheet5/fourier.cpp ../Examples/examples1.cpp ../Examples/examples2.cpp ../FreeMemory/freememory.cpp ../GUI/fourierlabel.cpp ../GUI/tabs.cpp ../Utils/RGB.cpp ../Utils/YCbCr.cpp ../imageviewer-main-qt5.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -397,6 +408,8 @@ moc_imageviewer-qt5.cpp: ../imageviewer-qt5.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
@@ -432,6 +445,8 @@ imageviewer-qt5.o: ../imageviewer-qt5.cpp ../imageviewer-qt5.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
@@ -439,6 +454,8 @@ imageviewer-qt5.o: ../imageviewer-qt5.cpp ../imageviewer-qt5.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o imageviewer-qt5.o ../imageviewer-qt5.cpp
 
 pixeloperations.o: ../Sheet1/pixeloperations.cpp ../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../imageviewer-qt5.h \
 		../GUI/fourierlabel.h \
 		../Examples/examples1.h \
@@ -457,6 +474,8 @@ filteroperations.o: ../Sheet2/filteroperations.cpp ../Sheet2/filteroperations.h 
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
 		../Sheet5/fourier.h
@@ -469,6 +488,8 @@ edgefilter.o: ../Sheet3/edgefilter.cpp ../Sheet3/edgefilter.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet4/hough.h \
 		../Sheet5/fourier.h
@@ -481,6 +502,8 @@ hough.o: ../Sheet4/hough.cpp ../Sheet4/hough.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet5/fourier.h
@@ -493,6 +516,8 @@ fourier.o: ../Sheet5/fourier.cpp ../Sheet5/fourier.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h
@@ -504,6 +529,8 @@ examples1.o: ../Examples/examples1.cpp ../Examples/examples1.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
@@ -516,6 +543,8 @@ examples2.o: ../Examples/examples2.cpp ../Examples/examples2.h \
 		../Examples/examples1.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
@@ -524,7 +553,9 @@ examples2.o: ../Examples/examples2.cpp ../Examples/examples2.h \
 
 freememory.o: ../FreeMemory/freememory.cpp ../FreeMemory/freememory.h \
 		../Examples/examples2.h \
-		../Sheet1/pixeloperations.h
+		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o freememory.o ../FreeMemory/freememory.cpp
 
 fourierlabel.o: ../GUI/fourierlabel.cpp ../GUI/fourierlabel.h
@@ -537,11 +568,19 @@ tabs.o: ../GUI/tabs.cpp ../GUI/fourierlabel.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \
 		../Sheet5/fourier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tabs.o ../GUI/tabs.cpp
+
+RGB.o: ../Utils/RGB.cpp ../Utils/RGB.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o RGB.o ../Utils/RGB.cpp
+
+YCbCr.o: ../Utils/YCbCr.cpp ../Utils/YCbCr.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o YCbCr.o ../Utils/YCbCr.cpp
 
 imageviewer-main-qt5.o: ../imageviewer-main-qt5.cpp ../imageviewer-qt5.h \
 		../GUI/fourierlabel.h \
@@ -549,6 +588,8 @@ imageviewer-main-qt5.o: ../imageviewer-main-qt5.cpp ../imageviewer-qt5.h \
 		../Examples/examples2.h \
 		../FreeMemory/freememory.h \
 		../Sheet1/pixeloperations.h \
+		../Utils/RGB.h \
+		../Utils/YCbCr.h \
 		../Sheet2/filteroperations.h \
 		../Sheet3/edgefilter.h \
 		../Sheet4/hough.h \

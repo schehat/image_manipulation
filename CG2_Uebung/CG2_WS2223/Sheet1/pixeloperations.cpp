@@ -71,6 +71,7 @@ namespace cg2 {
     }
 
     /**
+     * TO DO: not robust, reset not working properly
      * @brief changeImageDynamic
      *      calculate an image with the desired resolution (given bit depth -> dynamic value)
      *      and return the image pointer
@@ -81,22 +82,25 @@ namespace cg2 {
      * @return new Image to show in GUI
      */
     QImage* changeImageDynamic(QImage * image, int newDynamicValue) {
+        cg2::freeMemory();
         workingImage = new QImage(*backupImage);
-        int area = round(256.0 / newDynamicValue * newDynamicValue);
+        int nIntensity = pow(2, newDynamicValue);
+        int threshhold = pow(2, 8) / nIntensity;
         for (int row = 0; row < image->width(); row++) {
             for (int col = 0; col < image->height(); col++) {
                 QRgb pixel = image->pixel(row, col);
-                int grey = round(0.299*qRed(pixel) + 0.587*qGreen(pixel) + 0.114*qBlue(pixel));
+
+                int y = round(0.299*qRed(pixel) + 0.587*qGreen(pixel) + 0.114*qBlue(pixel));
                 int cb = round(-0.169*qRed(pixel) + -0.331*qGreen(pixel) + 0.5*qBlue(pixel));
                 int cr = round(0.5*qRed(pixel) + -0.419*qGreen(pixel) - 0.08*qBlue(pixel));
 
-                grey = area * round(grey / newDynamicValue);
-                cb = area * round(cb + 128/ newDynamicValue) - 128;
-                cr = area * round(cb + 128/ newDynamicValue) - 128;
+                y = y / threshhold * threshhold;
+                cb = ((cb + 128) / threshhold) * threshhold - 128;
+                cr = ((cb + 128) / threshhold) * threshhold - 128;
 
-                int r = grey + 45 * cr / 32 ;
-                int g = grey - (11 * cb + 23 * cr) / 32 ;
-                int b = grey + 113 * cb / 64 ;
+                int r = y + 45 * cr / 32 ;
+                int g = y - (11 * cb + 23 * cr) / 32 ;
+                int b = y + 113 * cb / 64 ;
 
                workingImage->setPixel(row, col, qRgb(r,g,b));
             }
@@ -117,16 +121,37 @@ namespace cg2 {
      * @return result image, will be shown in the GUI
      */
     QImage* adjustBrightness(QImage * image, int brightness_adjust_factor){
-        for(int i=0;i<image->width();i++)
-        {
-            for(int j=0;j<image->height();j++)
-            {
+        cg2::freeMemory();
+        workingImage = new QImage(*backupImage);
+        for (int row = 0; row < image->width(); row++) {
+            for (int col = 0; col < image->height(); col++) {
+                QRgb pixel = image->pixel(row, col);
 
+                int y = round(0.299*qRed(pixel) + 0.587*qGreen(pixel) + 0.114*qBlue(pixel));
+                int cb = round(-0.169*qRed(pixel) + -0.331*qGreen(pixel) + 0.5*qBlue(pixel));
+                int cr = round(0.5*qRed(pixel) + -0.419*qGreen(pixel) - 0.08*qBlue(pixel));
+
+                y += brightness_adjust_factor;
+
+                if (y + brightness_adjust_factor > 255) {
+                    break;
+                } else if (y + brightness_adjust_factor < 0) {
+                    break;
+                }
+
+//                YCbCr ycbcr = YCbCr((float)y, (float)cb, (float)cr);
+//                RGB rgb = ycbcr.YCbCrToRGB(ycbcr);
+
+                int r = y + 45 * cr / 32 ;
+                int g = y - (11 * cb + 23 * cr) / 32 ;
+                int b = y + 113 * cb / 64 ;
+
+               workingImage->setPixel(row, col, qRgb(r,g,b));
             }
         }
 
         logFile << "Brightness adjust applied with factor = " <<brightness_adjust_factor << std::endl;
-        return image;
+        return workingImage;
 
     }
 
