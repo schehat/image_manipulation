@@ -4,12 +4,11 @@
 
 #include <qimage.h>
 #include <cmath>
-#include "Utils/RGB.h"
-#include "Utils/YCbCr.h"
 
 namespace cg2{
     void calcImageCharacteristics(QImage * image, double*& histogram_ref, int& variance_ref, int& average_ref, const bool linear_scaling);
     inline double* histogramm = new double[256];
+
     inline int variance = 0;
     inline int average = 0;
     QImage* changeImageDynamic(QImage *  image, int newDynamicValue);
@@ -18,6 +17,7 @@ namespace cg2{
     QImage* doRobustAutomaticContrastAdjustment(QImage *  image, double plow, double phigh);
 
 }
+
 
 
 #endif // PIXELOPERATIONS_H
