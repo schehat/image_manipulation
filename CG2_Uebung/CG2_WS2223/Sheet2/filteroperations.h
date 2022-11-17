@@ -8,6 +8,7 @@
 namespace cg2 {
     QImage* filterImage(QImage * image, int**& filter, int filter_width, int filter_height, int border_treatment);
     QImage* filterGauss2D(QImage * image, double gauss_sigma, int border_treatment);
-
+    void clamping0_255(int& val);
+    void clamping_minus128_127(int& val);
 }
 #endif // FILTEROPERATIONS_H
