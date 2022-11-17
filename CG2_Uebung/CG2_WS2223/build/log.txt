@@ -6,43 +6,81 @@ Image characteristics calculated:
 --- Average: 124 ; Variance: 2290
 --- Histogram calculated: linear scaling = 1
 
-Filter read:
-filter applied:
----border treatment: Gespiegelte Randbedingung
----filter width: 3
----filter height: 3
---- Max number of pixel for a given brightness: 2988
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 3339
 Image characteristics calculated:
---- Average: 123 ; Variance: 2201
+--- Average: 105 ; Variance: 1631
 --- Histogram calculated: linear scaling = 1
 
-Filter read:
-filter applied:
----border treatment: Gespiegelte Randbedingung
----filter width: 3
----filter height: 3
---- Max number of pixel for a given brightness: 2866
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 3863
 Image characteristics calculated:
---- Average: 123 ; Variance: 2161
+--- Average: 89 ; Variance: 1188
 --- Histogram calculated: linear scaling = 1
 
-Filter read:
-filter applied:
----border treatment: Gespiegelte Randbedingung
----filter width: 3
----filter height: 3
---- Max number of pixel for a given brightness: 2912
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 4578
 Image characteristics calculated:
---- Average: 122 ; Variance: 2134
+--- Average: 76 ; Variance: 881
 --- Histogram calculated: linear scaling = 1
 
-Filter read:
-filter applied:
----border treatment: Gespiegelte Randbedingung
----filter width: 3
----filter height: 3
---- Max number of pixel for a given brightness: 2946
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 5117
 Image characteristics calculated:
---- Average: 122 ; Variance: 2111
+--- Average: 65 ; Variance: 669
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 5949
+Image characteristics calculated:
+--- Average: 55 ; Variance: 524
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 7171
+Image characteristics calculated:
+--- Average: 47 ; Variance: 424
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 8397
+Image characteristics calculated:
+--- Average: 40 ; Variance: 356
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 10516
+Image characteristics calculated:
+--- Average: 34 ; Variance: 312
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 11063
+Image characteristics calculated:
+--- Average: 29 ; Variance: 282
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 17216
+Image characteristics calculated:
+--- Average: 25 ; Variance: 262
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 24315
+Image characteristics calculated:
+--- Average: 21 ; Variance: 250
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 23291
+Image characteristics calculated:
+--- Average: 18 ; Variance: 243
+--- Histogram calculated: linear scaling = 1
+
+2D Gauss-Filter angewendet mit σ: 0.85 ---border treatment: Zentralbereich
+--- Max number of pixel for a given brightness: 22616
+Image characteristics calculated:
+--- Average: 16 ; Variance: 240
 --- Histogram calculated: linear scaling = 1
 
