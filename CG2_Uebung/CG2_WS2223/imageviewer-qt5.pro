@@ -25,8 +25,6 @@ SOURCES       = imageviewer-qt5.cpp \
                 FreeMemory/freememory.cpp \
                 GUI/fourierlabel.cpp \
                 GUI/tabs.cpp \
-                Utils/RGB.cpp \
-                Utils/YCbCr.cpp \
                 imageviewer-main-qt5.cpp
 
 # install
