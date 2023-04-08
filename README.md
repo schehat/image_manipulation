@@ -1,2 +1,2 @@
 # image_manipulation
-assignments during computer graphic course 
+Assignments during the computer graphics course to implement core concepts of image manipulation and computer vision algorithms for processing and detect objects in images used by libraries such as OpenCV, e.g. the Canny algorithm.
