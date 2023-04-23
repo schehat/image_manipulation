@@ -4,7 +4,7 @@ Assignments during the computer graphics course to implement preprocessing algor
 Runs on Ubuntu 20.04
 
 ![Screenshot](images/Canny.PNG)
-![Screenshot](images/Kantenoperation.PNG)
+![Screenshot](images/Kantenoperationen.PNG)
 ![Screenshot](images/Fourier.PNG)
 
 Run Manual:
